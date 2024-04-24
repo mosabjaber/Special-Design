@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Special Design</title>
+  </head>
+
+  <body class="font-serif">
+    <!--start settings box -->
+    <div
+      class="settings-box fixed z-50 bg-white w-48 -left-48 top-0 min-h-screen duration-1000 shadow-2xl"
+    >
+      <div
+        class="toggle-setting absolute top-28 -right-8 bg-white text-center cursor-pointer"
+      >
+        <i class="my-Sett fa-solid fa-gear w-8 py-1.5 px-0"></i>
+      </div>
+      <div class="settings-container">
+        <div class="option-box p-2.5 m-2.5 bg-zinc-300 text-center">
+          <h4 class="m-0 text-gray-600">Colors</h4>
+          <ul class="colors-list text-center p-0 mt-2">
+            <li
+              class="active w-5 h-5 rounded-full cursor-pointer inline-block"
+              data-color="#ff9800"
+            ></li>
+            <li
+              class="w-5 h-5 rounded-full cursor-pointer inline-block"
+              data-color="#e91e63"
+            ></li>
+            <li
+              class="w-5 h-5 rounded-full cursor-pointer inline-block"
+              data-color="#009688"
+            ></li>
+            <li
+              class="w-5 h-5 rounded-full cursor-pointer inline-block"
+              data-color="#03a9f4"
+            ></li>
+            <li
+              class="w-5 h-5 rounded-full cursor-pointer inline-block"
+              data-color="#4caf50"
+            ></li>
+          </ul>
+        </div>
+        <div class="option-box p-2.5 m-2.5 bg-zinc-300 text-center">
+          <h4 class="m-0 text-gray-600">Random Background</h4>
+          <div class="random-background">
+            <button
+              data-background="yes"
+              class="yes active w-12 text-white rounded mt-5 inline-block text-xs px-2.5 py-1 font-bold opacity-50"
+            >
+              Yes
+            </button>
+            <button
+              data-background="no"
+              class="no w-12 text-white rounded mt-5 inline-block text-xs px-2.5 py-1 font-bold opacity-50"
+            >
+              No
+            </button>
+          </div>
+        </div>
+        <div class="option-box p-2.5 m-2.5 bg-zinc-300 text-center">
+          <h4 class="m-0 text-gray-600">Show Bullets</h4>
+          <div class="bullets-option">
+            <button
+              data-display="show"
+              class="yes active w-12 text-white rounded mt-5 inline-block text-xs px-2.5 py-1 font-bold opacity-50"
+            >
+              Yes
+            </button>
+            <button
+              data-display="no"
+              class="no w-12 text-white rounded mt-5 inline-block text-xs px-2.5 py-1 font-bold opacity-50"
+            >
+              No
+            </button>
+          </div>
+        </div>
+        <div class="option-box p-2.5 m-2.5 bg-zinc-300 text-center">
+          <h4 class="m-0 text-gray-600">Reset Options</h4>
+          <div class="bullets-option">
+            <button
+              data-reset="ok"
+              class="reset active w-14 text-white rounded mt-5 inline-block text-xs px-2.5 py-1 font-bold opacity-50"
+            >
+              Reset
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end settings box -->
+
+    <!-- start nav bullets -->
+    <div class="nav-bullets fixed right-0 top-1/2 -translate-y-1/2 w-12 z-50">
+      <div
+        class="bullet w-5 h-5 rounded-full my-5 mx-auto cursor-pointer relative"
+        data-section=".about-us"
+      >
+        <div
+          class="tooltip w-28 text-white absolute py-2 px-2.5 right-8 -top-2.5 text-center text-sm cursor-default pointer-events-none before:content-[''] before:border-solid before:border-8 before:border-r-transparent before:border-y-transparent before:h-0 before:w-0 before:absolute before:-right-4 before:top-1/2 before:-translate-y-1/2 hidden"
+        >
+          About Us
+        </div>
+      </div>
+      <div
+        class="bullet w-5 h-5 rounded-full my-5 mx-auto cursor-pointer relative"
+        data-section=".skills"
+      >
+        <div
+          class="tooltip w-28 text-white absolute py-2 px-2.5 right-8 -top-2.5 text-center text-sm cursor-default pointer-events-none before:content-[''] before:border-solid before:border-8 before:border-r-transparent before:border-y-transparent before:h-0 before:w-0 before:absolute before:-right-4 before:top-1/2 before:-translate-y-1/2 hidden"
+        >
+          Our Skills
+        </div>
+      </div>
+      <div
+        class="bullet w-5 h-5 rounded-full my-5 mx-auto cursor-pointer relative"
+        data-section=".gallary"
+      >
+        <div
+          class="tooltip w-28 text-white absolute py-2 px-2.5 right-8 -top-2.5 text-center text-sm cursor-default pointer-events-none before:content-[''] before:border-solid before:border-8 before:border-r-transparent before:border-y-transparent before:h-0 before:w-0 before:absolute before:-right-4 before:top-1/2 before:-translate-y-1/2 hidden"
+        >
+          Our Gallery
+        </div>
+      </div>
+      <div
+        class="bullet w-5 h-5 rounded-full my-5 mx-auto cursor-pointer relative"
+        data-section=".timeline"
+      >
+        <div
+          class="tooltip w-28 text-white absolute py-2 px-2.5 right-8 -top-2.5 text-center text-sm cursor-default pointer-events-none before:content-[''] before:border-solid before:border-8 before:border-r-transparent before:border-y-transparent before:h-0 before:w-0 before:absolute before:-right-4 before:top-1/2 before:-translate-y-1/2 hidden"
+        >
+          Timeline
+        </div>
+      </div>
+      <div
+        class="bullet w-5 h-5 rounded-full my-5 mx-auto cursor-pointer relative"
+        data-section=".features"
+      >
+        <div
+          class="tooltip w-28 text-white absolute py-2 px-2.5 right-8 -top-2.5 text-center text-sm cursor-default pointer-events-none before:content-[''] before:border-solid before:border-8 before:border-r-transparent before:border-y-transparent before:h-0 before:w-0 before:absolute before:-right-4 before:top-1/2 before:-translate-y-1/2 hidden"
+        >
+          Features
+        </div>
+      </div>
+      <div
+        class="bullet w-5 h-5 rounded-full my-5 mx-auto cursor-pointer relative"
+        data-section=".testimonials"
+      >
+        <div
+          class="tooltip w-28 text-white absolute py-2 px-2.5 right-8 -top-2.5 text-center text-sm cursor-default pointer-events-none before:content-[''] before:border-solid before:border-8 before:border-r-transparent before:border-y-transparent before:h-0 before:w-0 before:absolute before:-right-4 before:top-1/2 before:-translate-y-1/2 hidden"
+        >
+          Testimonials
+        </div>
+      </div>
+    </div>
+    <!-- end nav bullets -->
+
+    <!-- start landing page -->
+    <div class="landing-page min-h-screen bg-cover relative duration-500">
+      <div class="overlay"></div>
+      <div class="container mx-auto px-4 z-50 relative">
+        <div
+          class="header-area relative z-10 text-white flex items-center p-2.5"
+        >
+          <div class="logo w-72 p-4 font-bold cursor-pointer">
+            Special Design
+          </div>
+          <div class="links-container w-full text-right">
+            <ul class="links hidden lg:block">
+              <li class="inline-block ml-2.5">
+                <a href="#about-us" class="active duration-200">About</a>
+              </li>
+              <li class="inline-block ml-2.5">
+                <a class="duration-200" href="#skills">Skills</a>
+              </li>
+              <li class="inline-block ml-2.5">
+                <a class="duration-200" href="#gallary">Gallary</a>
+              </li>
+              <li class="inline-block ml-2.5">
+                <a class="duration-200" href="#timeline">Timeline</a>
+              </li>
+              <li class="inline-block ml-2.5">
+                <a class="duration-200" href="#features">Features</a>
+              </li>
+              <li class="inline-block ml-2.5">
+                <a class="duration-200" href="#testimonials">Testimonials</a>
+              </li>
+            </ul>
+            <button class="toggle-menu relative w-9 inline-block lg:hidden">
+              <span class="block bg-white h-1 mb-1.5"></span>
+              <span class="block bg-white h-1 mb-1.5"></span>
+              <span class="block bg-white h-1 mb-1.5"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="introduction-text w-5/6 z-10 absolute text-center p-4 text-white left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+      >
+        <h1 class="sm:text-4xl text-2xl font-bold mb-4">
+          We Are <span>Creative</span> Agency
+        </h1>
+        <p class="sm:leading-7 sm:text-xl">
+          Lorem ipsum dolor sit amet consectetur amet adipisicing elit. Magnam
+          illo odit asperiores excepturi in, excepturi in.
+        </p>
+      </div>
+    </div>
+    <!-- end landing page -->
+    <!-- start About Us -->
+    <div class="container mx-auto px-4">
+      <div class="about-us py-12 flex flex-col sm:flex-row" id="about-us">
+        <div class="info-box flex-1 p-3 sm:p-7">
+          <h2 class="font-bold mb-2.5 text-3xl text-center sm:text-left">
+            About Us
+          </h2>
+          <p class="leading-relaxed text-gray-400 text-center sm:text-left">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste
+            corrupti eligendi eum molestias dignissimos iusto commodi! Fuga
+            labore itaque hic, corporis dolore architecto facilis maxime
+            doloribus. Quas ex a architecto?
+          </p>
+        </div>
+        <div class="image-box flex-1 flex justify-center">
+          <img class="sm:w-64 w-52" src="imgs/1731280.png" />
+        </div>
+      </div>
+    </div>
+    <!-- end About Us -->
+    <!-- start our skills -->
+    <div class="skills py-12 bg-slate-900" id="skills">
+      <div class="container mx-auto px-4">
+        <h2 class="font-bold mb-12 text-3xl text-center">Our Skills</h2>
+        <div
+          class="skill-box bg-white block sm:flex p-4 mb-4 w-5/6 items-center mx-auto"
+        >
+          <div
+            class="skill-name w-full sm:w-32 font-bold text-center mb-3.5 sm:mb-0"
+          >
+            HTML
+          </div>
+          <div
+            class="skills-progress h-7 w-full bg-zinc-200 rounded-md relative overflow-hidden"
+          >
+            <span
+              data-prog="90%"
+              class="absolute left-0 top-0 h-full w-0 duration-1000"
+            ></span>
+          </div>
+        </div>
+        <div
+          class="skill-box bg-white block sm:flex p-4 mb-4 w-5/6 items-center mx-auto"
+        >
+          <div
+            class="skill-name w-full sm:w-32 font-bold text-center mb-3.5 sm:mb-0"
+          >
+            CSS
+          </div>
+          <div
+            class="skills-progress h-7 w-full bg-zinc-200 rounded-md relative overflow-hidden"
+          >
+            <span
+              data-prog="85%"
+              class="absolute left-0 top-0 h-full w-0 duration-1000"
+            ></span>
+          </div>
+        </div>
+        <div
+          class="skill-box bg-white block sm:flex p-4 mb-4 w-5/6 items-center mx-auto"
+        >
+          <div
+            class="skill-name w-full sm:w-32 font-bold text-center mb-3.5 sm:mb-0"
+          >
+            Tailwind
+          </div>
+          <div
+            class="skills-progress h-7 w-full bg-zinc-200 rounded-md relative overflow-hidden"
+          >
+            <span
+              data-prog="85%"
+              class="absolute left-0 top-0 h-full w-0 duration-1000"
+            ></span>
+          </div>
+        </div>
+        <div
+          class="skill-box bg-white block sm:flex p-4 mb-4 w-5/6 items-center mx-auto"
+        >
+          <div
+            class="skill-name w-full sm:w-32 font-bold text-center mb-3.5 sm:mb-0"
+          >
+            Bootstrap
+          </div>
+          <div
+            class="skills-progress h-7 w-full bg-zinc-200 rounded-md relative overflow-hidden"
+          >
+            <span
+              data-prog="80%"
+              class="absolute left-0 top-0 h-full w-0 duration-1000"
+            ></span>
+          </div>
+        </div>
+        <div
+          class="skill-box bg-white block sm:flex p-4 mb-4 w-5/6 items-center mx-auto"
+        >
+          <div
+            class="skill-name w-full sm:w-32 font-bold text-center mb-3.5 sm:mb-0"
+          >
+            JavaScript
+          </div>
+          <div
+            class="skills-progress h-7 w-full bg-zinc-200 rounded-md relative overflow-hidden"
+          >
+            <span
+              data-prog="80%"
+              class="absolute left-0 top-0 h-full w-0 duration-1000"
+            ></span>
+          </div>
+        </div>
+        <div
+          class="skill-box bg-white block sm:flex p-4 mb-4 w-5/6 items-center mx-auto"
+        >
+          <div
+            class="skill-name w-full sm:w-32 font-bold text-center mb-3.5 sm:mb-0"
+          >
+            React
+          </div>
+          <div
+            class="skills-progress h-7 w-full bg-zinc-200 rounded-md relative overflow-hidden"
+          >
+            <span
+              data-prog="75%"
+              class="absolute left-0 top-0 h-full w-0 duration-1000"
+            ></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end our skills -->
+    <!-- start Gallery  -->
+    <div class="gallary py-12" id="gallary">
+      <div class="container mx-auto px-4">
+        <h2 class="font-bold mb-12 text-3xl text-center">Our Gallary</h2>
+        <div
+          class="images-box grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-items-center gap-4 items-center"
+        >
+          <img
+            decoding="async"
+            class="w-72 h-44 cursor-pointer p-1 bg-slate-100 border-2 border-solid divide-slate-900 hover:scale-105 hover:rotate-1"
+            src="imgs/gallary.jpg"
+            alt="image one"
+          />
+          <img
+            decoding="async"
+            class="w-72 h-44 cursor-pointer p-1 bg-slate-100 border-2 border-solid divide-slate-900 hover:scale-105 hover:rotate-1"
+            src="imgs/gallary2.jpg"
+            alt="image two"
+          />
+          <img
+            decoding="async"
+            class="w-72 h-44 cursor-pointer p-1 bg-slate-100 border-2 border-solid divide-slate-900 hover:scale-105 hover:rotate-1"
+            src="imgs/gallary3.webp"
+            alt="image three"
+          />
+          <img
+            decoding="async"
+            class="w-72 h-44 cursor-pointer p-1 bg-slate-100 border-2 border-solid divide-slate-900 hover:scale-105 hover:rotate-1"
+            src="imgs/gallary4.jpg"
+            alt="image four"
+          />
+          <img
+            decoding="async"
+            class="w-72 h-44 cursor-pointer p-1 bg-slate-100 border-2 border-solid divide-slate-900 hover:scale-105 hover:rotate-1"
+            src="imgs/gallary5.jpg"
+            alt="image five"
+          />
+          <img
+            decoding="async"
+            class="w-72 h-44 cursor-pointer p-1 bg-slate-100 border-2 border-solid divide-slate-900 hover:scale-105 hover:rotate-1"
+            src="imgs/land1.jpg"
+            alt="image six"
+          />
+          <img
+            decoding="async"
+            class="w-72 h-44 cursor-pointer p-1 bg-slate-100 border-2 border-solid divide-slate-900 hover:scale-105 hover:rotate-1"
+            src="imgs/land2.jpg"
+            alt="image seven"
+          />
+          <img
+            decoding="async"
+            class="w-72 h-44 cursor-pointer p-1 bg-slate-100 border-2 border-solid divide-slate-900 hover:scale-105 hover:rotate-1"
+            src="imgs/land3.jpg"
+            alt="image eight"
+          />
+          <img
+            decoding="async"
+            class="w-72 h-44 cursor-pointer p-1 bg-slate-100 border-2 border-solid divide-slate-900 hover:scale-105 hover:rotate-1"
+            src="imgs/land4.jpg"
+            alt="image nine"
+          />
+          <img
+            decoding="async"
+            class="w-72 h-44 cursor-pointer p-1 bg-slate-100 border-2 border-solid divide-slate-900 hover:scale-105 hover:rotate-1"
+            src="imgs/land5.jpg"
+            alt="image ten"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- end Gallery  -->
+    <!-- start Timeline  -->
+    <div class="timeline py-12 bg-slate-900 relative" id="timeline">
+      <div class="container mx-auto px-4">
+        <div
+          class="timeline-content overflow-hidden relative before:content-[''] before:w-0.5 before:h-full before:absolute before:left-1/2 before:-translate-x-1/2 before:top-0"
+        >
+          <div
+            class="year relative mx-auto my-5 w-12 z-10 rounded text-center text-white font-bold px-1 py-0.5"
+          >
+            2024
+          </div>
+          <div
+            class="time-left w-full mb-5 sm:mb-10 relative float-left before:content-[''] before:w-3.5 before:h-3.5 before:bg-white before:absolute before:rounded-full before:top-5 before:hidden sm:before:block"
+          >
+            <div
+              class="content bg-white p-5 rounded before:content-[''] before:border-solid before:border-8 before:border-l-white before:border-r-transparent before:border-y-transparent before:h-0 before:w-0 before:absolute before:-right-4 before:top-5 before:hidden sm:before:block"
+            >
+              <h3 class="font-bold text-xl mb-2.5">Testing Heading</h3>
+              <p class="text-gray-900 leading-relaxed">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+                facere placeat sint ea sed repellat mollitia! Quisquam maxime
+                explicabo dolorum dicta ad similique tempore repellat eveniet
+                ea! Nostrum, deleniti ratione!
+              </p>
+            </div>
+          </div>
+          <div class="clear-both"></div>
+          <div
+            class="time-right w-full mb-5 sm:mb-10 relative float-right before:content-[''] before:w-3.5 before:h-3.5 before:bg-white before:absolute before:rounded-full before:top-5 before:hidden sm:before:block"
+          >
+            <div
+              class="content bg-white p-5 rounded before:content-[''] before:border-solid before:border-8 before:border-r-white before:border-l-transparent before:border-y-transparent before:h-0 before:w-0 before:absolute before:-left-4 before:top-5 before:hidden sm:before:block"
+            >
+              <h3 class="font-bold text-xl mb-2.5">Testing Heading</h3>
+              <p class="text-gray-900 leading-relaxed">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+                facere placeat sint ea sed repellat mollitia! Quisquam maxime
+                explicabo dolorum dicta ad similique tempore repellat eveniet
+                ea! Nostrum, deleniti ratione!
+              </p>
+            </div>
+          </div>
+          <div class="clear-both"></div>
+          <div
+            class="year relative mx-auto my-5 w-12 z-10 rounded text-center text-white font-bold px-1 py-0.5"
+          >
+            2021
+          </div>
+          <div
+            class="time-left w-full mb-5 sm:mb-10 relative float-left before:content-[''] before:w-3.5 before:h-3.5 before:bg-white before:absolute before:rounded-full before:top-5 before:hidden sm:before:block"
+          >
+            <div
+              class="content bg-white p-5 rounded before:content-[''] before:border-solid before:border-8 before:border-l-white before:border-r-transparent before:border-y-transparent before:h-0 before:w-0 before:absolute before:-right-4 before:top-5 before:hidden sm:before:block"
+            >
+              <h3 class="font-bold text-xl mb-2.5">Testing Heading</h3>
+              <p class="text-gray-900 leading-relaxed">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+                facere placeat sint ea sed repellat mollitia! Quisquam maxime
+                explicabo dolorum dicta ad similique tempore repellat eveniet
+                ea! Nostrum, deleniti ratione!
+              </p>
+            </div>
+          </div>
+          <div class="clear-both"></div>
+
+          <div
+            class="time-right w-full mb-5 sm:mb-10 relative float-right before:content-[''] before:w-3.5 before:h-3.5 before:bg-white before:absolute before:rounded-full before:top-5 before:hidden sm:before:block"
+          >
+            <div
+              class="content bg-white p-5 rounded before:content-[''] before:border-solid before:border-8 before:border-r-white before:border-l-transparent before:border-y-transparent before:h-0 before:w-0 before:absolute before:-left-4 before:top-5 before:hidden sm:before:block"
+            >
+              <h3 class="font-bold text-xl mb-2.5">Testing Heading</h3>
+              <p class="text-gray-900 leading-relaxed">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+                facere placeat sint ea sed repellat mollitia! Quisquam maxime
+                explicabo dolorum dicta ad similique tempore repellat eveniet
+                ea! Nostrum, deleniti ratione!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Timeline  -->
+    <!-- start features -->
+    <div class="features py-20" id="features">
+      <h2 class="font-bold text-3xl mb-16 text-center">Our Features</h2>
+      <div
+        class="container mx-auto px-4 grid md:grid-cols-3 sm:grid-cols-2 text-center gap-14"
+      >
+        <div class="feat-box">
+          <img
+            src="imgs/Icon_01.png"
+            decoding="async"
+            class="w-24 inline-block"
+          />
+          <h4 class="text-xl mt-4 mb-10 relative font-bold">Development</h4>
+          <p class="w-4/5 mx-auto leading-7 text-gray-400">
+            We are professional marketeers, we will do anything you imagine in
+            no time.
+          </p>
+        </div>
+        <div class="feat-box">
+          <img
+            src="imgs/Icon_02.png"
+            decoding="async"
+            class="w-24 inline-block"
+          />
+          <h4 class="text-xl mt-4 mb-10 relative font-bold">Marketing</h4>
+          <p class="w-4/5 mx-auto leading-7 text-gray-400">
+            We are professional marketeers, we will do anything you imagine in
+            no time.
+          </p>
+        </div>
+        <div class="feat-box">
+          <img
+            src="imgs/Icon_03.png"
+            decoding="async"
+            class="w-24 inline-block"
+          />
+          <h4 class="text-xl mt-4 mb-10 relative font-bold">Hosting</h4>
+          <p class="w-4/5 mx-auto leading-7 text-gray-400">
+            We are professional marketeers, we will do anything you imagine in
+            no time.
+          </p>
+        </div>
+        <div class="feat-box">
+          <img
+            src="imgs/Icon_04.png"
+            decoding="async"
+            class="w-24 inline-block"
+          />
+          <h4 class="text-xl mt-4 mb-10 relative font-bold">Database</h4>
+          <p class="w-4/5 mx-auto leading-7 text-gray-400">
+            We are professional marketeers, we will do anything you imagine in
+            no time.
+          </p>
+        </div>
+        <div class="feat-box">
+          <img
+            src="imgs/Icon_05.png"
+            decoding="async"
+            class="w-24 inline-block"
+          />
+          <h4 class="text-xl mt-4 mb-10 relative font-bold">
+            Cloud and Server
+          </h4>
+          <p class="w-4/5 mx-auto leading-7 text-gray-400">
+            We are professional marketeers, we will do anything you imagine in
+            no time.
+          </p>
+        </div>
+        <div class="feat-box">
+          <img
+            src="imgs/Icon_06.png"
+            decoding="async"
+            class="w-24 inline-block"
+          />
+          <h4 class="text-xl mt-4 mb-10 relative font-bold">Seo</h4>
+          <p class="w-4/5 mx-auto leading-7 text-gray-400">
+            We are professional marketeers, we will do anything you imagine in
+            no time.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- end features -->
+    <!-- start Testimonials -->
+    <div
+      class="testimonials relative py-20 before:content-[''] before:w-1/2 before:absolute before:left-0 before:top-0 before:h-full after:content-[''] after:w-1/2 after:absolute after:right-0 after:top-0 after:h-full"
+      id="testimonials"
+    >
+      <div class="container mx-auto px-4">
+        <h2
+          class="font-bold text-3xl mb-16 lg:text-left text-center text-white relative z-10"
+        >
+          Testimonials
+        </h2>
+        <div class="ts-content flex flex-col lg:flex-row">
+          <div
+            class="ts-box relative z-10 bg-white w-full p-5 mr-3 mb-3 lg:mb-0"
+          >
+            <p
+              class="mb-5 t text-gray-400 text-lg italic text-center lg:text-left"
+            >
+              I am very happy with the product its amazing and i recieve it very
+              fast and the price was amazing.
+            </p>
+            <div
+              class="person-info overflow-hidden text-left flex flex-col items-center lg:flex-none"
+            >
+              <img src="imgs/Icon_03.png" class="w-20 h-20 float-left mr-5" />
+              <h4 class="mt-4 mb-1 text-xl font-bold">Mosab Jaber</h4>
+              <p class="text-gray-400">CEO At Company</p>
+            </div>
+          </div>
+          <div
+            class="ts-box relative z-10 bg-white w-full p-5 mr-3 mb-3 lg:mb-0"
+          >
+            <p
+              class="mb-5 t text-gray-400 text-lg italic text-center lg:text-left"
+            >
+              I am very happy with the product its amazing and i recieve it very
+              fast and the price was amazing.
+            </p>
+            <div
+              class="person-info overflow-hidden text-left flex flex-col items-center"
+            >
+              <img src="imgs/Icon_03.png" class="w-20 h-20 float-left mr-5" />
+              <h4 class="mt-4 mb-1 text-xl font-bold">Mosab Jaber</h4>
+              <p class="text-gray-400">CEO At Company</p>
+            </div>
+          </div>
+          <div
+            class="ts-box relative z-10 bg-white w-full p-5 mr-3 mb-3 lg:mb-0"
+          >
+            <p
+              class="mb-5 t text-gray-400 text-lg italic text-center lg:text-left"
+            >
+              I am very happy with the product its amazing and i recieve it very
+              fast and the price was amazing.
+            </p>
+            <div
+              class="person-info overflow-hidden text-left flex flex-col items-center"
+            >
+              <img src="imgs/Icon_03.png" class="w-20 h-20 float-left mr-5" />
+              <h4 class="mt-4 mb-1 text-xl font-bold">Mosab Jaber</h4>
+              <p class="text-gray-400">CEO At Company</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Testimonials -->
+    <!-- start contact us -->
+    <div class="contact-us py-20 relative">
+      <div class="overlay"></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <h2 class="font-bold text-3xl mb-16 text-center">Contact Us</h2>
+        <form
+          class="flex flex-col sm:flex-row justify-center items-center gap-5"
+        >
+          <div class="left flex flex-col w-2/5">
+            <input
+              type="text"
+              placeholder="Your Name"
+              name="username"
+              class="border-2 border-stone-400 p-2.5 mb-4 h-10 focus:placeholder:opacity-0 focus:placeholder:duration-500"
+            />
+            <input
+              type="text"
+              placeholder="Your Phone"
+              name="Phone"
+              class="border-2 border-stone-400 p-2.5 mb-4 h-10 focus:placeholder:opacity-0 focus:placeholder:duration-500"
+            />
+            <input
+              type="email"
+              placeholder="Your Email"
+              name="email"
+              class="border-2 border-stone-400 p-2.5 mb-4 h-10 focus:placeholder:opacity-0 focus:placeholder:duration-500"
+            />
+            <input
+              type="text"
+              placeholder="Your Subject"
+              name="subject"
+              class="border-2 border-stone-400 p-2.5 mb-4 h-10 focus:placeholder:opacity-0 focus:placeholder:duration-500"
+            />
+          </div>
+          <div class="right flex flex-col w-2/5">
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              class="border-2 border-stone-400 p-2.5 mb-4 focus:placeholder:opacity-0 focus:placeholder:duration-500"
+            ></textarea>
+            <input
+              type="submit"
+              value="Send"
+              class="h-10 text-white cursor-pointer p-2.5 leading-none"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- end contact us -->
+    <!-- start footer -->
+    <div
+      class="footer capitalize font-bold bg-slate-900 text-white p-5 text-center"
+    >
+      created by mosab jaber
+    </div>
+    <!-- end footer -->
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
